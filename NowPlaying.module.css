@@ -1,0 +1,111 @@
+.moviePosterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.moviePosterItem {
+  position: relative;
+  width: calc(23% - 100px);
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.moviePoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.darkOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.moviePosterItem:hover .darkOverlay {
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.moviePosterItem:hover .overlay {
+  display: flex;
+  opacity: 1;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 180px;
+  font-family: 'Arial', sans-serif;
+}
+
+.btnRed {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.btnWhite {
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btnRed:hover {
+  background-color: darkred;
+}
+
+.btnWhite:hover {
+  background-color: #f5f5f5;
+}
+
+.movieTitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+  z-index: 10;
+  margin-bottom: 10px;
+}
